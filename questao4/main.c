@@ -25,6 +25,8 @@ int main()
     p1 = &valor;
     *p1 = 20;
     printf("%d \n", valor);
+    //Expectativa: 20
+    //Saída: 20
 
     /* (b) */
     temp = 26.5;

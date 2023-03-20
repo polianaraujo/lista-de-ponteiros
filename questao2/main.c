@@ -1,6 +1,4 @@
-/*Mostre o que será impresso por programa
-supondo que i ocupa o endereço 4094
-na memória*/
+/*Mostre o que será impresso por programa supondo que i ocupa o endereço 4094 na memória*/
 
 #include <stdio.h>
 

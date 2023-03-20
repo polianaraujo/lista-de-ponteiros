@@ -10,7 +10,7 @@ int main()
 {
     int valor;
     int *p1;
-    float temp
+    float temp;
     float *p2;
     char aux;
     char *nome = "Ponteiros";
@@ -36,8 +36,6 @@ int main()
     p2 = &temp;
     *p2 = 29.0;
     printf("%.1f \n", temp);
-    // p3 = $
-    // aux = P
     //Expectativa: 29.0
     //Saída: 29.0
 
@@ -45,6 +43,8 @@ int main()
     p3 = &nome[0];
     aux = *p3;
     printf("%c \n", aux);
+    // p3 = $
+    // aux = P
     //Expectativa: 29.0
     //Saída: 29.0
 

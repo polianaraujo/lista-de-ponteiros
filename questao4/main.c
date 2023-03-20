@@ -14,7 +14,7 @@ int main()
     float *p2;
     char aux;
     char *nome = "Ponteiros";
-    char p3;
+    char *p3;
     int idade;
     int vetor[3];
     int *p4;
@@ -25,6 +25,9 @@ int main()
     p1 = &valor;
     *p1 = 20;
     printf("%d \n", valor);
+    // valor = 10
+    // p1 = endereço de valor (algum valor)
+    // *p1 = 10 -> que agora foi atribuído outro valor -> 20
     //Expectativa: 20
     //Saída: 20
 
@@ -33,11 +36,17 @@ int main()
     p2 = &temp;
     *p2 = 29.0;
     printf("%.1f \n", temp);
+    // p3 = $
+    // aux = P
+    //Expectativa: 29.0
+    //Saída: 29.0
 
     /* (c) */
     p3 = &nome[0];
     aux = *p3;
     printf("%c \n", aux);
+    //Expectativa: 29.0
+    //Saída: 29.0
 
     /* (d) */
     p3 = &nome[4];

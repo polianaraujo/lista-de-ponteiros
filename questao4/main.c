@@ -36,6 +36,10 @@ int main()
     p2 = &temp;
     *p2 = 29.0;
     printf("%.1f \n", temp);
+    // temp = 26.5
+    // p2 = o endereço de temp
+    // *p2 = 29.0 -> conteúdo do endereço de temp = 29.0
+    // portanto *p2 = temp
     //Expectativa: 29.0
     //Saída: 29.0
 
@@ -52,6 +56,10 @@ int main()
     p3 = &nome[4];
     aux = *p3;
     printf("%c \n", aux);
+    // p3 = ( -> endereço do quarto elemento do nome
+    // aux = e -> conteúdo de p3 -> conteúdo do endereço do quarto elemento do nome
+    //Expectativa: e
+    //Saída: e
 
     /* (e) */
     p3 = nome;

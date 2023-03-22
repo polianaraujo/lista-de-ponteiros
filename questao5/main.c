@@ -12,7 +12,7 @@ int main(void)
     float *f;
     int i;
     f=vet;
-    print("contador/valor/valor/endereco/endereco");
+    printf("contador/valor/valor/endereco/endereco");
     for(i=0;i<=4;i++){
         printf("\ni=%d",i);
         printf("vet[%d]=%.1f",i,vet[i]);

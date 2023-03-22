@@ -27,7 +27,8 @@ int main()
     printf("%d \n", valor);
     // valor = 10
     // p1 = endereço de valor (algum valor)
-    // *p1 = 10 -> que agora foi atribuído outro valor -> 20
+    // *p1 = conteúdo do endereço de valor -> *p1 = *&valor = valor
+    // *p1 = 10 = valor -> que agora foi atribuído outro valor -> *p1 = 20 = valor
     //Expectativa: 20
     //Saída: 20
 

@@ -38,9 +38,10 @@ int main()
     *p2 = 29.0;
     printf("%.1f \n", temp);
     // temp = 26.5
-    // p2 = o endereço de temp
-    // *p2 = 29.0 -> conteúdo do endereço de temp = 29.0
-    // portanto *p2 = temp
+    // p2 = &temp = endereço de temp
+    // *p2 = 29.0
+    // *p2 = conteúdo do endereço de temp
+    // *p2 = *&temp = temp -> temp = 29.0 (foi atribuído um novo valor para temp)
     //Expectativa: 29.0
     //Saída: 29.0
 
@@ -48,10 +49,12 @@ int main()
     p3 = &nome[0];
     aux = *p3;
     printf("%c \n", aux);
+    // p3 = &nome[0] = endereço da primeira letra de nome
     // p3 = $
-    // aux = P
-    //Expectativa: 29.0
-    //Saída: 29.0
+    // *p3 = conteúdo de p3 = P
+    // aux = *p3 = P
+    //Expectativa = P
+    //Saída = P
 
     /* (d) */
     p3 = &nome[4];

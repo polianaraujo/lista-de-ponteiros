@@ -61,13 +61,18 @@ int main()
     aux = *p3;
     printf("%c \n", aux);
     // p3 = ( -> endereço do quarto elemento do nome
-    // aux = e -> conteúdo de p3 -> conteúdo do endereço do quarto elemento do nome
+    // aux = conteúdo de p3 = e
     //Expectativa: e
     //Saída: e
 
     /* (e) */
     p3 = nome;
     printf("%c \n", *p3);
+    // *nome = conteúdo do endereço de nome = P
+    // p3 = nome = endereço de nome = $
+    // *p3 = conteúdo de p3 = P
+    //Expectativa = P
+    //Saída = P
 
     /* (f) */
     p3 = p3 + 4;

@@ -9,7 +9,7 @@ Justifique.
 
 int main()
 {
-    int mat[4], *p, x;
+    int mat[4]={0,1,2,3}, *p, x;
 
     printf("%d", (mat+1));
 

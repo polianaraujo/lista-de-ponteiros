@@ -16,6 +16,12 @@ int main()
     /*laço de repetição para imprimir os valores
     percorrendo de 0 até 2 (três valores) elementos
     do vetor*/
+
+    /*Saída:
+    valor do 1o (vet[0]) elemento = 4
+    valor do 2o (vet[1]) elemento = 9
+    valor do 3o (vet[2]) elemento = 13
+    */
     
     return 0;
 }

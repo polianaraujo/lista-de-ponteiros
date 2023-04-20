@@ -17,11 +17,11 @@ int main()
     //Saída = 1
 
     //INCORRETA
-    p2 = mat++;       //não existe essa expressão
+    //p2 = mat++;       //não existe essa expressão
     //printf("%d", p2);
 
     //INCORRETA
-    p3 = ++mat;       //não existe essa expressão
+    //p3 = ++mat;       //não existe essa expressão
     //printf("%d", p3);
 
     //CORRETA

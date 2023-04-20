@@ -9,13 +9,13 @@ Justifique.
 
 int main()
 {
-    int mat[4]={0,1,2,3}, *p1, *p2, *p3, x;
-
+    int mat[4]={0,1,2,3}, *p, x;
+    //int  *p2, *p3;
     //CORRETA
-    p1 = mat+1;       // p1 = mat[0 + 1] = mat[1] = 1
-    printf("%d", p1);
+    p = mat+1;       // p1 = mat[0 + 1] = mat[1] = 1
+    printf("%d", p);
     //Saída = 1
-
+    printf("%d", mat[3]);
     //INCORRETA
     //p2 = mat++;       //não existe essa expressão
     //printf("%d", p2);

@@ -22,6 +22,20 @@ int main()
     valor do 2o (vet[1]) elemento = 9
     valor do 3o (vet[2]) elemento = 13
     */
+
+    for(i=0;i<3;i++)
+    {
+        printf("valor do %do (vet[%d]) elemento = %X \n", (i+1), i, (vet+i));
+    }
+    /*laço de repetição para imprimir os valores
+    percorrendo de 0 até 2 (três valores) elementos
+    do vetor*/
+
+    /*Saída:
+    valor do 1o (vet[0]) elemento = 4
+    valor do 2o (vet[1]) elemento = 9
+    valor do 3o (vet[2]) elemento = 13
+    */
     
     return 0;
 }

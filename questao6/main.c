@@ -20,6 +20,7 @@ int main()
     {
         printf("\npulo[%d] = %d", i, pulo[i]);
     }
+    return 0;
 }
 
 /*

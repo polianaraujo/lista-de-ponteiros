@@ -48,5 +48,3 @@ ocupará 8 bytes a mais*/
 printf("%f", xd+1); //Saída esperada: 4100
 printf("%d", xd+2); //Saída esperada: 4108
 printf("%d", xd+3); //Saída esperada: 4116
-    
-}

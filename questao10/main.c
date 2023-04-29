@@ -15,6 +15,7 @@ int main()
     1 byte a mais*/
 
     printf("x tipo char:\n");
+    
     printf("%d\n", xc+1);
     //Esperada: 4093
     //Saída:    6422301
@@ -35,6 +36,7 @@ int main()
     2 bytes a mais*/
 
     printf("x tipo int:\n");
+    
     printf("%d\n", xi+1);
     //Esperada: 4094
     //Saída:    6422288
@@ -55,6 +57,7 @@ int main()
     4 bytes a mais*/
 
     printf("x tipo float:\n");
+    
     printf("%d\n", xf+1);
     //sperada: 4096
     //Saída:   6422272
@@ -75,6 +78,7 @@ int main()
     8 bytes a mais*/
 
     printf("x tipo double:\n");
+    
     printf("%d\n", xd+1);
     //Esperada: 4100
     //Saída:    6422240

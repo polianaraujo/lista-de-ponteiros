@@ -93,32 +93,42 @@ int main()
     vetor[2] = 27;
     p4 = vetor;                     // p4 = &vetor[0] =  6422256
     idade = *p4;                    // idade = 31
-    printf("idade = %d \n", idade);
+    printf("%d \n", idade);
     //Expectativa = 31
     //Saída = 31
 
-    /* (i)
-    p5 = p4 + 1;
-    idade = *p5;
+    // (i)
+    p5 = p4 + 1;             //p5 = &vetor[0+1]
+    idade = *p5;             //idade = 45
     printf("%d \n", idade);
+    //Expectativa = 45
+    //Saída = 45
 
     // (j)
-    p4 = p5 + 1;
-    idade = *p4;
+    p4 = p5 + 1;             //p4 = &vetor[1+1]
+    idade = *p4;             //idade = 27
     printf("%d \n", idade);
+    //Expectativa = 45
+    //Saída = 45
 
     // (l)
-    p4 = p4 - 2;
-    idade = *p4;
+    p4 = p4 - 2;             //p4 = &vetor[2-2]
+    idade = *p4;             //idade = 31
     printf("%d \n", idade);
+    //Expectativa = 31
+    //Saída = 31
 
     // (m)
-    p5 = &vetor[2] - 1;
-    printf("%d \n", *p5);
+    p5 = &vetor[2] - 1;      //p5 = p4 - 1 = &vetor[2-1]
+    printf("%d \n", *p5);    //*p5 = *&vetor[1] = 45
+    //Expectativa = 45
+    //Saída = 45
 
     // (n)
-    p5++;
-    printf("%d \n", *p5);*/
+    p5++;                    //p5 = 6422259 + 1
+    printf("%d \n", *p5);    //*p5 = *&vetor[2] = 27
+    //Expectativa = 27
+    //Saída = 27
 
     return 0;
 }

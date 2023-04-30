@@ -9,8 +9,8 @@ q=&j;
 
 i=3, j=5; // i e j inteiros
 *p, *q;   // p e q ponteiros
-p=&i;     // o conteúdo de p é igual ao endereço de i
-q=&j;     // o conteúdo de q é igual ao endereço de j
+p=&i;     // p vai armazenar o endereço de i
+q=&j;     // q vai armazenar o endereço de j
 
 //Determine o valor das seguintes expressões:
 

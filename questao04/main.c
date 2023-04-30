@@ -74,44 +74,51 @@ int main()
     //Expectativa = P
     //Saída = P
 
-    /* (f) */
+    // (f)
     p3 = p3 + 4;
     printf("%c \n", *p3);
+    //Expectativa = e
+    //Saída = e
 
-    /* (g) */
+    // (g)
     p3--;
     printf("%c \n", *p3);
+    //Expectativa = t, pois o último p3 = e = p3[4]
+    // p3-- = p3[4-1] = p[3] = t
+    //Saída = t
 
-    /* (h) */
-    valor[0] = 31;
-    valor[1] = 45;
-    valor[2] = 27;
-    p4 = vetor;
-    idade = *p4;
-    printf("%d \n", idade);
+    // (h)
+    vetor[0] = 31;
+    vetor[1] = 45;
+    vetor[2] = 27;
+    p4 = vetor;                     // p4 = &vetor[0] =  6422256
+    idade = *p4;                    // idade = 31
+    printf("idade = %d \n", idade);
+    //Expectativa = 31
+    //Saída = 31
 
-    /* (i) */
+    /* (i)
     p5 = p4 + 1;
     idade = *p5;
     printf("%d \n", idade);
 
-    /* (j) */
+    // (j)
     p4 = p5 + 1;
     idade = *p4;
     printf("%d \n", idade);
 
-    /* (l) */
+    // (l)
     p4 = p4 - 2;
     idade = *p4;
     printf("%d \n", idade);
 
-    /* (m) */
+    // (m)
     p5 = &vetor[2] - 1;
     printf("%d \n", *p5);
 
-    /* (n) */
+    // (n)
     p5++;
-    printf("%d \n", *p5);
+    printf("%d \n", *p5);*/
 
     return 0;
 }

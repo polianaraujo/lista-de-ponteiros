@@ -7,6 +7,8 @@ zar a tarefa.
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>       // for clock_t, clock(), CLOCKS_PER_SEC
+#include <unistd.h>     // for sleep()
 
 // função para fazer a comparação
 int comparador(const void *a, const void *b)
@@ -18,6 +20,8 @@ int comparador(const void *a, const void *b)
 
 int main()
 {
+    double time_spent = 0.0;
+    clock_t begin = clock();
     int n;
 
     printf("Defina a quantidade de n:");
@@ -35,21 +39,7 @@ int main()
     
     //função C que faz o laço de repetição utilizando a função de comparação
     qsort(x, n, sizeof(int), comparador);
-
-    /*ordena crescente
-    for(i=0; i<n; i++)
-    {
-        for(int j=0; j<n; j++)
-        {
-            if(x[i] < x[j])
-            {
-                int aux = x[i];
-                x[i] = x[j];
-                x[j] = aux;
-            }
-        }
-    }*/
-
+    
     // mostrar valores ordenados
     for(i=0; i<n; i++)
     {
@@ -58,6 +48,12 @@ int main()
     }
     
     free(x); // liberar memória utilizada
+    
+    sleep(3);
 
+    clock_t end = clock();
+    time_spent += (double)(end - begin) / CLOCKS_PER_SEC;
+    printf("\nTempo de execução é %f segundos", time_spent);
+    
     return 0;
 }

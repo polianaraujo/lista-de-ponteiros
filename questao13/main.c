@@ -7,9 +7,13 @@ mória para realizar a tarefa.
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>       // for clock_t, clock(), CLOCKS_PER_SEC
+#include <unistd.h>     // for sleep()
 
 int main()
 {
+    double time_spent = 0.0;
+    clock_t begin = clock();
     int n;
 
     printf("Defina a quantidade de n:");
@@ -48,5 +52,10 @@ int main()
     
     free(x); // liberar memória utilizada
 
+    sleep(3);
+
+    clock_t end = clock();
+    time_spent += (double)(end - begin) / CLOCKS_PER_SEC;
+    printf("\nTempo de execução é %f segundos", time_spent);
     return 0;
 }

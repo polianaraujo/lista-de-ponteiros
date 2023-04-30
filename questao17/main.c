@@ -10,3 +10,52 @@ tores e o número de elementos presentes em cada vetor.
 Exemplo: soma_vetores(vet1, vet2, resultado, 4);
 */
 
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int n;
+
+    printf("Defina a quantidade n de elementos que os dois vetores devem ter:");
+    scanf("%d", &n);
+
+    int *x1, *x2, *s, i;
+    x1 = malloc(n*sizeof(int)); // definir espaço  para o vetor1
+    x2 = malloc(n*sizeof(int)); // definir espaço  para o vetor2
+    s = malloc(n*sizeof(int)); // definir espaço  para o vetor soma
+
+    // entrar com os valores do vetor1
+    for(i=0; i<n; i++)
+    {
+        printf("Entre com o x1[%d]: ", i);
+        scanf("%d", &x1[i]);
+    }
+    // entrar com os valores do vetor2
+    for(i=0; i<n; i++)
+    {
+        printf("Entre com o x2[%d]: ", i);
+        scanf("%d", &x2[i]);
+    }
+    
+    //soma
+    for(i=0; i<n; i++)
+    {
+        s[i] = x1[i] + x2[i];
+    }
+
+    // mostrar vetor soma
+    printf("Vetor soma = {");
+    for(i=0; i<n; i++)
+    {
+        printf("%d", s[i]);
+        if(i!=(n-1)) printf(", ");
+    }
+    printf("}");
+
+    free(x1); // liberar memória utilizada pelo vetor1
+    free(x2); // liberar memória utilizada pelo vetor2
+    free(s); // liberar memória utilizada pelo vetor soma
+
+    return 0;
+}

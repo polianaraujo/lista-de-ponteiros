@@ -33,6 +33,7 @@ int main()
         scanf("%d", &x[i]);
     }
     
+    //função C que faz o laço de repetição utilizando a função de comparação
     qsort(x, n, sizeof(int), comparador);
 
     /*ordena crescente

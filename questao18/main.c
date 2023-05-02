@@ -33,7 +33,7 @@ int main()
 
     int A[al][ac];
     int B[bl][bc];
-    int C[ac][bl];
+    int C[al][bc];
 
     //definindo os valores da matriz A
     printf("\nMatriz A:\n");
@@ -42,9 +42,9 @@ int main()
         for(j=0; j<ac; j++)
         {
             A[i][j] = rand() % 10;
-            //printf("%d ", A[i][j]);
+            printf("%d ", A[i][j]);
         }
-        //printf("\n");
+        printf("\n");
     }
     
     //definindo os valores da matriz B
@@ -54,22 +54,19 @@ int main()
         for(j=0; j<bc; j++)
         {
             B[i][j] = rand() % 10;
-            //printf("%d ", B[i][j]);
+            printf("%d ", B[i][j]);
         }
-        //printf("\n");
+        printf("\n");
     }
     
     //multiplicação de AxB, matriz C
-    //printf("\nMatriz C:\n");
-    for(i=0; i<al; i++)
-    {
-        for(j=0; j<bc; i++)
-        {
-            C[i][j] = 0;
+    // A(m,n) * B(n,p) = C(m,p)
+    for(i=0; i<al; i++){
+        for(j=0; j<bc; j++) {
+            //C[i][j] = 0;
             int aux=0;
-            for(int x=0; x<bl; x++)
-            {
-                aux = A[i][x] * B[x][j];
+            for(int x=0; x<bl; x++) {
+                aux += A[i][x] * B[x][j];
             }
             C[i][j] = aux;
             //printf("%d ", C[i][j]);
@@ -80,9 +77,9 @@ int main()
 
     //imprimindo matriz C
     printf("\nMatriz C:\n");
-    for(i=0; i<ac; i++)
+    for(i=0; i<al; i++)
     {
-        for(j=0; j<bl; j++)
+        for(j=0; j<bc; j++)
         {
             printf("%d ", C[i][j]);
         }

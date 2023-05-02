@@ -21,7 +21,6 @@ int comparador(const void *a, const void *b)
 int main()
 {
     double time_spent = 0.0;
-    clock_t begin = clock();
     int n;
 
     printf("Defina a quantidade de n:");
@@ -36,10 +35,19 @@ int main()
         printf("Entre com o x[%d]: ", i);
         scanf("%d", &x[i]);
     }
+
+    /* função para testar o tempo para a questao 16, com muitos elementos
+    for(i=0; i<n; i++)
+    {
+        x[i] = rand() % 100;
+        printf("x[%d] = %d\n", i, x[i]);
+    }*/
     
+    clock_t begin = clock();
     //função C que faz o laço de repetição utilizando a função de comparação
     qsort(x, n, sizeof(int), comparador);
-    
+    clock_t end = clock();
+
     // mostrar valores ordenados
     for(i=0; i<n; i++)
     {
@@ -50,10 +58,8 @@ int main()
     free(x); // liberar memória utilizada
     
     sleep(3);
-
-    clock_t end = clock();
     time_spent += (double)(end - begin) / CLOCKS_PER_SEC;
-    printf("\nTempo de execução é %f segundos", time_spent);
+    printf("\nTempo de execucao é %f segundos", time_spent);
     
     return 0;
 }

@@ -9,6 +9,7 @@ minará como os elementos do array serão ordenados.
 #include <stdio.h>
 #include <stdlib.h>
 
+//função para imprimir 
 void print_array(float* v, int n) {
     for (int j = 0; j < n; j++) {
         printf("%.2f ", v[j]);
@@ -16,6 +17,7 @@ void print_array(float* v, int n) {
     printf("\n");
 }
 
+//função para comparar
 int compare (float* a, float* b)
 {
   if (*a < *b) return -1;
@@ -23,8 +25,7 @@ int compare (float* a, float* b)
   if (*a > *b) return 1;
 }
 
-// [1,2,3,4,5]
-
+//função de ordenação
 void my_sort(float* v, int n, int (*pcomp)(float* ,float*)) {
     for (int sweep = 0; sweep < n; sweep++) {
         int swapped = 0;
@@ -47,19 +48,18 @@ int main () {
     float* v = (float*)malloc(n * sizeof(float));
     int (*pcomp)(float* ,float*) = &compare;
 
-    // Preencher array
-
+    //preencher vetor comm números
     for (int j = 0; j < n; j++) {
         v[j] = (float)rand()/(float)(__INT_MAX__/100);
     }
 
-    // Exibi-lo
-
+    // Exibi-lo antes da ordenação
     print_array(v,n);
 
     // Ordenar
-
     my_sort(v,n,pcomp);
-
+    // Exibi-lo depois da ordenado
     print_array(v,n);
+
+    free(v);
 }
